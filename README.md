@@ -40,3 +40,6 @@ A set of best practice contribution guidelines can be found in the
 Pull in [GFC Avro](https://github.com/gilt/events-gfc-avro)
 
 ### Dates and timestamps
+
+## Contribution guidelines
+See https://github.com/gilt/events-standards/blob/master/CONTRIBUTIONS.md
