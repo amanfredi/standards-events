@@ -35,11 +35,18 @@ to the repository (all others having `read`-only access).
 A set of best practice contribution guidelines can be found in the
 `CONTRIBUTIONS.md` that is part of this repository.
 
-### gfc.avro
+### GFC Avro
 
-Pull in [GFC Avro](https://github.com/gilt/events-gfc-avro)
+There are shared schemas define in the [GFC Avro
+repository](https://github.com/gilt/events-gfc-avro). You can pull in the
+latest version of these schemas with the following command:
+
+```bash
+curl -s -o target/gfc.avdl "https://raw.githubusercontent.com/gilt/events-gfc-avro/master/events.avdl"
+```
 
 ### Dates and timestamps
 
 ## Contribution guidelines
+
 See https://github.com/gilt/events-standards/blob/master/CONTRIBUTIONS.md
