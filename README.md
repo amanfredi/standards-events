@@ -27,9 +27,14 @@ By convention the repository should be named: `events-<protocol>` where
 `<protocol>` should be repaced by the name of the Avro protocol you are
 defining.
 
+We include major version numbers in the namespace. Note that all
+changes to events sharing a major version number must by definition in
+Avro be backwards compatible.
+
 For example. if you create a repo named 'events-orders' we would
 expect to see an Avro idl file containing:
 
+    @namespace("com.gilt.orders.v1")
     protocol Orders {
       ...
     }
@@ -49,7 +54,7 @@ We recommend thorough review of schema changes for each repository. The recommen
       
       See [the MAINTAINERS file for this repo](https://github.com/gilt/events-standards/blob/master/MAINTAINERS) for an example.
 
-  2. Create a team in githb named "governance-protocol" with `write` access
+  2. Create a team in github named "governance-protocol" with `write` access
 to the repository (all others having `read`-only access).
 
   3. Create a "CONTRIBUTIONS.md" file in the rood of the repository that describes the policy by which contributions will be accepted. The standard Gilt policy is modeled after the docker hub project. Pls feel free to link directly to the [standard CONTRIBUTIONS.md policy](https://github.com/gilt/events-standards/blob/master/CONTRIBUTIONS.md) for your project.

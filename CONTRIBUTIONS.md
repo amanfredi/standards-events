@@ -143,7 +143,9 @@ through a pull request.
 
 ### Who assigns maintainers?
 
-MAINTAINERS are changed view pull requests and the standard approval process - i.e. create an issue and make a pull request with the chagnes to the MAINTAINERS file.
+MAINTAINERS are changed via pull requests and the standard approval
+process - i.e. create an issue and make a pull request with the
+changes to the MAINTAINERS file.
 
 ### How is this process changed?
 
