@@ -33,25 +33,29 @@ Note that the maintainers work on feature branches in this repository.
 Make sure the events.avdl is valid. One simple way to do this:
 
     #TODO: proper avdl validation command and response
-    curl -X POST -d @./api.json http://api.apidoc.me/validations
 
 you should see:
 
-    {"valid":true,"errors":[]}
+    #TODO
 
 Pull requests descriptions should be as clear as possible and include a
-reference to all the issues that they address.
+reference to all the issues that they address. In github, you can reference an issue by adding a line to your commit description that follows the format:
+
+    - Fixes #xxx
+  
+  where xxx is the issue number.
 
 ## Merge approval
 
 &lt;Protocol&gt; Event Definitions maintainers use LGTM (Looks Good To Me) in
 comments on the code review to indicate acceptance.
 
-A change requires LGTMs from an absolute majority of the MAINTAINERS.
+A change requires LGTMs from an absolute majority of the MAINTAINERS. The Benevolent dictator for life reserves sole veto power. We recommend also getting an LGTM from
+the BDFL in advance of merging to avoid the possibility of a revert.
 
 #### Small patch exception
 
-There are several exceptions to the signing requirement. Currently these are:
+There are several exceptions to the merge approval process. Currently these are:
 
 * Your patch fixes spelling or grammar errors.
 * Your patch fixes Markdown formatting or syntax errors in any .md files in
@@ -123,13 +127,14 @@ by accepting or refusing pull requests. Review and acceptance by anyone is
 denoted by adding a comment in the pull request: `LGTM`. However, only
 currently listed `MAINTAINERS` are counted towards the required majority.
 
-&lt;Protocol&gt; Event Definitions follows the timeless, highly efficient and
+Event repositories follow the timeless, highly efficient and
 totally unfair system known as [Benevolent dictator for
-life](http://en.wikipedia.org/wiki/Benevolent_Dictator_for_Life), with yours
-truly, &lt;Repository Creator&gt;, in the role of BDFL. This means that all
-decisions are made in the end, by default, by &lt;Repository Creator&gt;. In
+life](http://en.wikipedia.org/wiki/Benevolent_Dictator_for_Life). This means that all
+decisions are made in the end, by default, by &lt;BDFL&gt;. In
 practice decisions are spread across the maintainers with the goal of
 consensus prior to all merges.
+
+The current BDFL is listed by convention in the first line of the MAINTAINERS file with a suffix of "BDFL".
 
 ### I'm a maintainer. Should I make pull requests too?
 
@@ -138,8 +143,7 @@ through a pull request.
 
 ### Who assigns maintainers?
 
-&lt;Repository Creator&gt; has final `LGTM` approval for all pull requests to
-`MAINTAINERS` files.
+MAINTAINERS are changed view pull requests and the standard approval process - i.e. create an issue and make a pull request with the chagnes to the MAINTAINERS file.
 
 ### How is this process changed?
 
