@@ -57,7 +57,7 @@ We recommend thorough review of schema changes for each repository. The recommen
   2. Create a team in github named "governance-protocol" with `write` access
 to the repository (all others having `read`-only access).
 
-  3. Create a "CONTRIBUTIONS.md" file in the rood of the repository that describes the policy by which contributions will be accepted. The standard Gilt policy is modeled after the docker hub project. Pls feel free to link directly to the [standard CONTRIBUTIONS.md policy](https://github.com/gilt/events-standards/blob/master/CONTRIBUTIONS.md) for your project.
+  3. Create a "CONTRIBUTIONS.md" file in the rood of the repository that describes the policy by which contributions will be accepted. The standard Gilt policy is modeled after the docker hub project. Please feel free to link directly to the [standard CONTRIBUTIONS.md policy](https://github.com/gilt/events-standards/blob/master/CONTRIBUTIONS.md) for your project.
 
 ### GFC Avro
 
@@ -65,9 +65,8 @@ GFC (or Gilt Foundation Classes) is a standard namespace for key libraries that 
 repository](https://github.com/gilt/events-gfc-avro). You can pull in the
 latest version of these schemas with the following command:
 
-    bash
     curl -s -o target/gfc.avdl \
-          "https://raw.githubusercontent.com/gilt/events-gfc-avro/master/events.avdl"
+        "https://raw.githubusercontent.com/gilt/events-gfc-avro/master/events.avdl"
 
 ### Dates and timestamps
 
