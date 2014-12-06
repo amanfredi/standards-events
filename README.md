@@ -3,48 +3,49 @@ Standards & Guidelines For Defining Events
 
 ### Inter-departmental communication via events
 
-At Gilt we've agreed on open standards and tools (HTTP, JSON, DNS) for inter-departmental synchronous communication.
+At Gilt we've agreed on open standards and tools (HTTP, JSON, DNS) for
+inter-departmental synchronous communication.
 
-For asynchronous inter-departmental communication [Avro](http://avro.apache.org/docs/current/) has been chosen as the de facto
+For asynchronous inter-departmental communication
+[Avro](http://avro.apache.org/docs/current/) has been chosen as the de facto
 standard for event definition and transport.
 
 
 ### Avro IDL
 
-[Avro IDL](http://avro.apache.org/docs/current/idl.html) is the
-standard tool we choose for defining Avro schemas at Gilt.
+[Avro IDL](http://avro.apache.org/docs/current/idl.html) is the standard tool
+we choose for defining Avro schemas at Gilt.
 
-The primary benefit of IDL is how the focus of the documents is the
-schema itself which we think will lead to higher quality reviews over
-time.
+The primary benefit of IDL is how the focus of the documents is the schema
+itself which we think will lead to higher quality reviews over time.
 
 
 ### Repository
 
-Due to the importance of getting the inter-departmental communication
-API right we encourage creating a separate repository with high
-visibility and tight governance for defining your Avro schemas.
+Due to the importance of getting the inter-departmental communication API right
+we encourage creating a separate repository with high visibility and tight
+governance for defining your Avro schemas.
 
 By convention the repository should be named: `events-<protocol>` where
 `<protocol>` should be repaced by the name of the Avro protocol you are
 defining.
 
-We include major version numbers in the namespace. Note that all
-changes to events sharing a major version number must by definition in
-Avro be backwards compatible.
+We include major version numbers in the namespace. Note that all changes to
+events sharing a major version number must by definition in Avro be backwards
+compatible.
 
 Examples:
 
-If you create a repo named 'events-orders' we would expect to see an
-Avro idl file containing:
+If you create a repo named 'events-orders' we would expect to see an Avro idl
+file containing:
 
     @namespace("com.gilt.orders.v1")
     protocol Orders {
       ...
     }
 
-If you create a repo named 'events-mobile-tapstream' we would expect
-to see an Avro idl file containing:
+If you create a repo named 'events-mobile-tapstream' we would expect to see an
+Avro idl file containing:
 
     @namespace("com.gilt.mobile.tapstream.v1")
     protocol MobileTapstream {
@@ -55,9 +56,19 @@ View all existing events repositories at
 [GitHub](https://github.com/gilt?query=events)
 
 
+### Types
+
+In general, for non primitive types, we are following the guidelines of the
+types documented at [apidoc](http://www.apidoc.me/doc/types).
+
+Specific schemas for common types will be listed here as recommendations for
+teams to adopt.
+
+
 ### GFC Avro
 
-GFC (or Gilt Foundation Classes) is a standard namespace for key libraries that we open source at Gilt. We have shared avro schemas in the [events-gfc-avro
+GFC (or Gilt Foundation Classes) is a standard namespace for key libraries that
+we open source at Gilt. We have shared avro schemas in the [events-gfc-avro
 repository](https://github.com/gilt/events-gfc-avro). You can pull in the
 latest version of these schemas with the following command:
 
@@ -65,14 +76,7 @@ latest version of these schemas with the following command:
         "https://raw.githubusercontent.com/gilt/events-gfc-avro/master/events.avdl"
 
 
-### General
-
-In general, for non primitive types, we are following the guidelines of the types documented at [apidoc](http://www.apidoc.me/doc/types).
-
-Specific schemas for common types will be listed here as recommendations for teams to adopt.
-
-
-### Dates and timestamps
+### Dates and Timestamps
 
 The preferred format for dates and timestamps is ISO-8601 in string type. The
 name should be suffixed with Iso6801 for clarity. E.g.:
