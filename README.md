@@ -56,6 +56,25 @@ View all existing events repositories at
 [GitHub](https://github.com/gilt?query=events)
 
 
+### Capitalization Rules
+
+* Type names (i.e. records, enums, etc) should be written in [upper camel
+  case](http://c2.com/cgi/wiki?UpperCamelCase)
+
+* Field names should be written in [lower camel
+  case](http://c2.com/cgi/wiki?LowerCamelCase)
+
+Some clarifications:
+
+* Acronyms should also be camel cased. E.g. when ```URL``` appears in a type or
+  field name it should be be written as ```Url``` except if it appears at the
+  beginning of a field name in which case it should be written as ```url```.
+
+* Oddly capitalized words such as ```iOS``` should be written as ```Ios```
+  except if it appears at the begining of a field name in which case it should
+  be written as ```ios```.
+
+
 ### Types
 
 In general, for non primitive types, we are following the guidelines of the
