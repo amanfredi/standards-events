@@ -31,11 +31,21 @@ We include major version numbers in the namespace. Note that all
 changes to events sharing a major version number must by definition in
 Avro be backwards compatible.
 
-For example. if you create a repo named 'events-orders' we would
-expect to see an Avro idl file containing:
+Examples:
+
+If you create a repo named 'events-orders' we would expect to see an
+Avro idl file containing:
 
     @namespace("com.gilt.orders.v1")
     protocol Orders {
+      ...
+    }
+
+If you create a repo named 'events-mobile-tapstream' we would expect
+to see an Avro idl file containing:
+
+    @namespace("com.gilt.mobile.tapstream.v1")
+    protocol MobileTapstream {
       ...
     }
 
