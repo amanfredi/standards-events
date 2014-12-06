@@ -66,10 +66,13 @@ View all existing events repositories at
 
 Some clarifications:
 
-* Acronyms should also be camel cased. E.g. when ```URL``` appears in a type
-  or field name it should be be written as ```Url```
+* Acronyms should also be camel cased. E.g. when ```URL``` appears in a type or
+  field name it should be be written as ```Url``` except if it appears at the
+  beginning of a field name in which case it should be written as ```url```.
 
 * Oddly capitalized words such as ```iOS``` should be written as ```Ios```
+  except if it appears at the begining of a field name in which case it should
+  be written as ```ios```.
 
 
 ### Types
