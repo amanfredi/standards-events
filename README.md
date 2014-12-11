@@ -20,7 +20,9 @@ The primary benefit of IDL is how the focus of the documents is the schema
 itself which we think will lead to higher quality reviews over time.
 
 
-### Repository
+### Naming
+
+#### Repository
 
 Due to the importance of getting the inter-departmental communication API right
 we encourage creating a separate repository with high visibility and tight
@@ -30,14 +32,20 @@ By convention the repository should be named: `events-<protocol>` where
 `<protocol>` should be repaced by the name of the Avro protocol you are
 defining.
 
+View all existing events repositories at
+[GitHub](https://github.com/gilt?query=events)
+
+
+#### Avro
+
 We include major version numbers in the namespace. Note that all changes to
 events sharing a major version number must by definition in Avro be backwards
 compatible.
 
 Examples:
 
-If you create a repo named 'events-orders' we would expect to see an Avro idl
-file containing:
+If you create a repo named 'events-orders' we would expect to see an Avro IDL
+file named ```orders.avdl``` in it's root directory containing:
 
     @namespace("com.gilt.orders.v1")
     protocol Orders {
@@ -45,15 +53,13 @@ file containing:
     }
 
 If you create a repo named 'events-mobile-tapstream' we would expect to see an
-Avro idl file containing:
+Avro IDL file named ```mobile-tapstream.avdl``` in it's root directory
+containing:
 
     @namespace("com.gilt.mobile.tapstream.v1")
     protocol MobileTapstream {
       ...
     }
-
-View all existing events repositories at
-[GitHub](https://github.com/gilt?query=events)
 
 
 ### Capitalization Rules
