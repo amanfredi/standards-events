@@ -104,7 +104,7 @@ latest version of these schemas with the following command:
 ### Dates and Timestamps
 
 The preferred format for dates and timestamps is ISO-8601 in string type. The
-name should be suffixed with Iso6801 for clarity. E.g.:
+name should be suffixed with Iso8601 for clarity. E.g.:
 
 ```
 string createdAtIso8601;
